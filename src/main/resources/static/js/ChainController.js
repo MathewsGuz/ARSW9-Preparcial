@@ -4,4 +4,25 @@
  * and open the template in the editor.
  */
 
+var ChainControllerModule =(function(){
+    var sendChain=function(text){
+        var callback ={
+            onSuccess: function(answer){
+                //se mostrara la tabla 
+                var table = document.getElementById("Top10");
+                table.
+                alert("cadena aceptada");
+            },
+            onFailed: function(answer){
+                alert("la peticion no pudo ser completada");
+                console.log(answer);
+            }
+        };
+        RestControllerModule.postChain(text,callback)
+    };
+    
+    return{
+        sendChain: sendChain
+    };
+})();
 

@@ -38,9 +38,15 @@ and open the template in the editor.
         <h1 class="cover-heading">Formulario PreExamen.</h1>
       </main>
         <div class="input-group-append">
-         <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Ingresar</button>
+            <input  type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" id="text">
+         <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="ChainControllerModule.sendChain(text.value)">Ingresar</button>
         </div>
+        <table style="width:100%" id="Top10">
+            <tr>
+              <th>text</th>
+              <th>date</th> 
+            </tr>
+          </table>
       <footer class="mastfoot mt-auto">
         <div class="inner">
           <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
@@ -58,6 +64,9 @@ and open the template in the editor.
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/ChainRestController.js"></script>
+    <script src="js/ChainController.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   
 
   </body></html>

@@ -23,7 +23,6 @@ public class ChainServices  implements CommandLineRunner {
     
     @Override
     public void run(String... args) throws Exception {
-        repo.deleteAll();
         repo.save(new Chain("heloo world"));
         System.out.println("Coneccion a la base de datos");
     }
