@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.company.arsw9.preparcial.db;
+package com.company.arsw9.preparcial.entities;
 import java.util.Date;
 import org.springframework.data.annotation.Id;
+import org.springframework.stereotype.Service;
 /**
  *
  * @author 2108263
  */
+
 public class Chain {
     
     @Id

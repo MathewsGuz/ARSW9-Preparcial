@@ -6,6 +6,8 @@
 package com.company.arsw9.preparcial.db;
 
 
+import com.company.arsw9.preparcial.entities.Chain;
+import com.company.arsw9.preparcial.entities.ChainRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -16,20 +18,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
-public class Application implements CommandLineRunner {
-    
-    @Autowired
-    private ChainRepository repo;
-    
+public class Application {
+
     public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
-    
-    @Override
-    public void run(String... args) throws Exception {
-        repo.deleteAll();
-        repo.save(new Chain("heloo world"));
-        System.out.println("Coneccopn a la base de datos");
-    }
-    
 }
