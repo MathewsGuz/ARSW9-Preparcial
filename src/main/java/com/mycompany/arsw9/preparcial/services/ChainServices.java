@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.company.arsw9.preparcial.services;
+package com.mycompany.arsw9.preparcial.services;
 
-import com.company.arsw9.preparcial.entities.Chain;
-import com.company.arsw9.preparcial.entities.ChainRepository;
+import com.mycompany.arsw9.preparcial.entities.Chain;
+import com.mycompany.arsw9.preparcial.entities.ChainRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;

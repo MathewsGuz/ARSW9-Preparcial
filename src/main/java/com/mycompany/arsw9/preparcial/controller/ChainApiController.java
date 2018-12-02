@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.company.arsw9.preparcial.controller;
+package com.mycompany.arsw9.preparcial.controller;
 
 
-import com.company.arsw9.preparcial.services.ChainServices;
+import com.mycompany.arsw9.preparcial.services.ChainServices;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
