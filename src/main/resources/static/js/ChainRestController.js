@@ -13,7 +13,7 @@ var RestControllerModule =(function (){
                 })
                 .catch(function(error){
                     callback.onFailed(error.data);
-                    console.log(error.data)
+                    console.log(error.data);
                 });
     };
     

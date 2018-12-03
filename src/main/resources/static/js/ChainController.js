@@ -11,6 +11,24 @@ var ChainControllerModule =(function(){
                 //se mostrara la tabla 
                 var table = document.getElementById("Top10");
 //                table.
+
+                  // creating rows
+                for (var r = 0; r < 10; r++) {
+                    var row = document.createElement("tr");
+
+                     // create cells in row
+                     for (var c = 0; c < 2; c++) {
+                        var cell = document.createElement("td");
+                        getRandom = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+                        var cellText = document.createTextNode(Math.floor(Math.random() * (10 - 1 + 1)) + 1);
+                        cell.appendChild(cellText);
+                        row.appendChild(cell);
+                    }           
+
+                table.appendChild(row); // add the row to the end of the table body
+                }
+
+
                 console.log(text);
                 alert("cadena aceptada:" +text);
             },
@@ -19,7 +37,7 @@ var ChainControllerModule =(function(){
                 console.log(answer);
             }
         };
-        RestControllerModule.postChain(text,callback)
+        RestControllerModule.postChain(text,callback);
     };
     
     return{
