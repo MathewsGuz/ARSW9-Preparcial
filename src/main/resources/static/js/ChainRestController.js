@@ -8,6 +8,7 @@ var RestControllerModule =(function (){
         axios.post('/chain',text)
                 .then(function(response){
                     callback.onSuccess(response.data);
+                    console.log(text);
                     console.log(response.data);
                 })
                 .catch(function(error){

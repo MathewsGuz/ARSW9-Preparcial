@@ -28,7 +28,7 @@ public class Chain {
     @Override
     public String toString() {
         return String.format(
-            "Customer[id=%s, String='%s', Date='%s']",
+            "Customer[id%s, String'%s', Date'%s']",
             id, text, date);
     }
         

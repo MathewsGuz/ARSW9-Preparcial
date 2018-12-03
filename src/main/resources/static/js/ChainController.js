@@ -10,8 +10,9 @@ var ChainControllerModule =(function(){
             onSuccess: function(answer){
                 //se mostrara la tabla 
                 var table = document.getElementById("Top10");
-                table.
-                alert("cadena aceptada");
+//                table.
+                console.log(text);
+                alert("cadena aceptada:" +text);
             },
             onFailed: function(answer){
                 alert("la peticion no pudo ser completada");
