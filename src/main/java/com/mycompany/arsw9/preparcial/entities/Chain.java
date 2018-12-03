@@ -17,12 +17,13 @@ public class Chain {
     @Id
     public String id;
     public String text;
-    public Date date=new Date();
+    public Date date;
 
 
 
     public Chain(String text) {
         this.text = text;
+        this.date =new Date();
     }
 
     @Override
