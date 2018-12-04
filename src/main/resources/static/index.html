@@ -20,7 +20,7 @@ and open the template in the editor.
     <link href="js/cover.css" rel="stylesheet">
   </head>
 
-  <body class="text-center">
+  <body class="text-center" onload="ChainControllerModule.crateTab()">
 
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
@@ -41,17 +41,19 @@ and open the template in the editor.
             <input  type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" id="text">
          <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="ChainControllerModule.sendChain(text.value)">Ingresar</button>
         </div>
+        <div>
         <table style="width:100%" id="Top10">
             <tr>
               <th>text</th>
               <th>date</th> 
             </tr>
           </table>
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
         </div>
-      </footer>
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+              <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+        </footer>
       
     </div>
   

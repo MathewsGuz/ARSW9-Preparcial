@@ -28,18 +28,29 @@ public class ChainApiController {
     @Autowired
     ChainServices app;
     
-     @RequestMapping(method = RequestMethod.POST)	
-	public ResponseEntity<?> addChain(@RequestBody String text){
-            try {
-                //curl -i -X POST -HContent-Type:application/json -HAccept:application/json http://localhost:8080/chain -d '{"orderAmountsMap":{"HAMBURGER":2,"PIZAA":3,"BEER":2},"tableNumber":2}'
-                    //registrar dato
-                    //curl -i -X POST -HContent-Type:application/json -HAccept:application/json http://localhost:8080/chain -d 'hola diana'
-                    app.saveChain(text);
-                    return new ResponseEntity<>("Insercion a db",HttpStatus.CREATED);
-            } catch (Exception ex) {
-                    Logger.getLogger(ChainServices.class.getName()).log(Level.SEVERE, null, ex);
-                    return new ResponseEntity<>("Error texto no puede ser Registrado ",HttpStatus.FORBIDDEN);            
-            }        
-	
-	}
+    @RequestMapping(method = RequestMethod.POST)	
+    public ResponseEntity<?> addChain(@RequestBody String text){
+        try {
+            //curl -i -X POST -HContent-Type:application/json -HAccept:application/json http://localhost:8080/chain -d '{"orderAmountsMap":{"HAMBURGER":2,"PIZAA":3,"BEER":2},"tableNumber":2}'
+                //registrar dato
+                //curl -i -X POST -HContent-Type:application/json -HAccept:application/json http://localhost:8080/chain -d 'hola diana'
+                app.saveChain(text);
+                return new ResponseEntity<>("Insercion a db",HttpStatus.CREATED);
+        } catch (Exception ex) {
+                Logger.getLogger(ChainServices.class.getName()).log(Level.SEVERE, null, ex);
+                return new ResponseEntity<>("Error texto no puede ser Registrado ",HttpStatus.FORBIDDEN);            
+        }        
+    }
+    @RequestMapping(method = RequestMethod.GET)
+    public ResponseEntity<?> getChain(){
+        try {
+                return new ResponseEntity<>(app.Find(),HttpStatus.ACCEPTED);
+        } catch (Exception ex) {
+                Logger.getLogger(ChainServices.class.getName()).log(Level.SEVERE, null, ex);
+                return new ResponseEntity<>("Error texto no puede ser Registrado ",HttpStatus.FORBIDDEN);            
+        
+         }
+    }
+    
+    
 }

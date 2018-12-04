@@ -17,8 +17,21 @@ var RestControllerModule =(function (){
                 });
     };
     
+    var getChain = function(callback){
+        axios.get('/chain')
+                .then(function(response){
+                    callback.onSuccess(response.data);
+                    console.log(response.data);
+                })
+                .catch(function(error){
+                    callback.onFailed(error.data);
+                    console.log(error.data);
+                });
+    };
+    
     return {
-        postChain: postChain
+        postChain: postChain,
+        getChain: getChain
     };
     
 })();

@@ -34,6 +34,7 @@ public class ChainServices  implements CommandLineRunner {
     }
     
     public List<Chain> Find(){
-        return repo.findAll();
+        List<Chain> allChains =repo.findAll();
+        return allChains.subList(allChains.size()-10, allChains.size());
     }
 }
